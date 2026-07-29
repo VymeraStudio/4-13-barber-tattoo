@@ -1,0 +1,24 @@
+{
+  "name": "4-13-barber-tatto",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VymeraStudio/4-13-barber-tattoo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/VymeraStudio/4-13-barber-tattoo/issues"
+  },
+  "homepage": "https://github.com/VymeraStudio/4-13-barber-tattoo#readme",
+  "devDependencies": {
+    "sharp": "^0.35.3"
+  }
+}

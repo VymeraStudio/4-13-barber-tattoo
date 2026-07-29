@@ -1,4 +1,4 @@
-/* ==========================
+﻿/* ==========================
    HERO INTERNO
 ========================== */
 
@@ -20,7 +20,7 @@
             rgba(10, 10, 10, 0.60) 55%,
             rgba(10, 10, 10, 0.35) 100%
         ),
-        url("../assets/images/interior/hero.png");
+        url("../assets/images/interior/hero.webp");
 
     background-size: cover;
     background-position: center;
@@ -47,7 +47,7 @@
 
 
 /* ==========================
-   CONTEÚDO DO HERO
+   CONTEÃšDO DO HERO
 ========================== */
 
 .portfolio-hero-content {
@@ -97,7 +97,7 @@
 
 
 /* ==========================
-   PÁGINA DE PORTFÓLIO
+   PÃGINA DE PORTFÃ“LIO
 ========================== */
 
 .portfolio-page {
@@ -305,7 +305,7 @@
 
 
 /* ==========================
-   LINK DA PÁGINA ATUAL
+   LINK DA PÃGINA ATUAL
 ========================== */
 
 .nav-submenu a[aria-current="page"],
@@ -393,8 +393,8 @@
 
 
     /*
-       No telemóvel não existe hover.
-       As informações ficam sempre visíveis.
+       No telemÃ³vel nÃ£o existe hover.
+       As informaÃ§Ãµes ficam sempre visÃ­veis.
     */
 
     .portfolio-page-overlay {
@@ -444,7 +444,7 @@
 }
 
 /* ==========================
-   HERO DA PÁGINA TATTOO
+   HERO DA PÃGINA TATTOO
 ========================== */
 
 .portfolio-hero-tattoo {
@@ -455,7 +455,7 @@
             rgba(10, 10, 10, 0.62) 55%,
             rgba(10, 10, 10, 0.38) 100%
         ),
-        url("../assets/images/tattoo/hero.png");
+        url("../assets/images/tattoo/hero.webp");
 
     background-position: center;
 }
