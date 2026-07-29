@@ -1,4 +1,4 @@
-﻿/* ==========================
+/* ==========================
    BODY
 ========================== */
 
@@ -66,9 +66,9 @@ h3 {
 @media (min-width: 901px) {
 
     /*
-       Logo Ã  esquerda.
+       Logo à esquerda.
        Links centralizados.
-       BotÃ£o Agendar Ã  direita.
+       Botão Agendar à direita.
     */
 
     .navbar {
@@ -181,7 +181,7 @@ h3 {
 }
 
 
-/* ConteÃºdo principal */
+/* Conteúdo principal */
 
 .hero-content {
     position: relative;
@@ -273,7 +273,7 @@ h3 {
 
 
 /* ==========================
-   INTERAÃ‡ÃƒO DO BARBER POLE
+   INTERAÇÃO DO BARBER POLE
 ========================== */
 
 .barber-pole:hover {
@@ -394,7 +394,7 @@ h3 {
 
 
 /* ==========================
-   EFEITO CILÃNDRICO
+   EFEITO CILÍNDRICO
 ========================== */
 
 .barber-pole > span::after {
@@ -416,7 +416,7 @@ h3 {
 
 
 /* ==========================
-   ANIMAÃ‡ÃƒO DO BARBER POLE
+   ANIMAÇÃO DO BARBER POLE
 ========================== */
 
 @keyframes barberPoleSpin {
@@ -433,7 +433,7 @@ h3 {
 
 
 /* ==========================
-   PORTFÃ“LIO
+   PORTFÓLIO
 ========================== */
 
 .portfolio {
@@ -444,7 +444,7 @@ h3 {
 
 
 /* ==========================
-   CABEÃ‡ALHO DAS SEÃ‡Ã•ES
+   CABEÇALHO DAS SEÇÕES
 ========================== */
 
 .section-header {
@@ -633,7 +633,7 @@ h3 {
 
 
 /* ==========================
-   CARTÃ•ES DE CONTACTO
+   CARTÕES DE CONTACTO
 ========================== */
 
 .contact-info {
@@ -903,7 +903,7 @@ h3 {
 }
 
 
-/* Ãrea invisÃ­vel entre o botÃ£o e o menu */
+/* Área invisível entre o botão e o menu */
 
 .nav-submenu::before {
     content: "";
@@ -1002,7 +1002,7 @@ h3 {
 }   
 
 /* ==========================
-   HORÃRIO DO FOOTER
+   HORÁRIO DO FOOTER
 ========================== */
 
 .footer-hours {

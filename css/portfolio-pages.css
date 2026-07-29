@@ -1,4 +1,4 @@
-﻿/* ==========================
+/* ==========================
    HERO INTERNO
 ========================== */
 
@@ -47,7 +47,7 @@
 
 
 /* ==========================
-   CONTEÃšDO DO HERO
+   CONTEÚDO DO HERO
 ========================== */
 
 .portfolio-hero-content {
@@ -97,7 +97,7 @@
 
 
 /* ==========================
-   PÃGINA DE PORTFÃ“LIO
+   PÁGINA DE PORTFÓLIO
 ========================== */
 
 .portfolio-page {
@@ -305,7 +305,7 @@
 
 
 /* ==========================
-   LINK DA PÃGINA ATUAL
+   LINK DA PÁGINA ATUAL
 ========================== */
 
 .nav-submenu a[aria-current="page"],
@@ -393,8 +393,8 @@
 
 
     /*
-       No telemÃ³vel nÃ£o existe hover.
-       As informaÃ§Ãµes ficam sempre visÃ­veis.
+       No telemóvel não existe hover.
+       As informações ficam sempre visíveis.
     */
 
     .portfolio-page-overlay {
@@ -444,7 +444,7 @@
 }
 
 /* ==========================
-   HERO DA PÃGINA TATTOO
+   HERO DA PÁGINA TATTOO
 ========================== */
 
 .portfolio-hero-tattoo {
