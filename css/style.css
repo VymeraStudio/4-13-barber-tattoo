@@ -1045,3 +1045,163 @@ h3 {
 
     font-weight: 600;
 }
+
+/* ==========================
+   COOKIE BANNER
+========================== */
+
+.cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+
+    padding: 18px 0;
+
+    background: #0f0f0f;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+
+    box-shadow:
+        0 -12px 35px rgba(0, 0, 0, 0.45);
+}
+
+
+.cookie-banner[hidden] {
+    display: none;
+}
+
+
+.cookie-banner__content {
+    width: min(
+        1120px,
+        calc(100% - 32px)
+    );
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 32px;
+}
+
+
+.cookie-banner__text {
+    max-width: 720px;
+}
+
+
+.cookie-banner__text strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+
+.cookie-banner__text p {
+    margin: 6px 0 0;
+
+    color: #c8c8c8;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+.cookie-banner__actions {
+    display: flex;
+    gap: 12px;
+
+    flex-shrink: 0;
+}
+
+
+.cookie-button {
+    min-width: 110px;
+
+    padding: 11px 18px;
+
+    border: 1px solid #ffffff;
+
+    font: inherit;
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.cookie-button--primary {
+    color: #0f0f0f;
+    background: #ffffff;
+}
+
+
+.cookie-button--primary:hover {
+    color: #ffffff;
+    background: transparent;
+}
+
+
+.cookie-button--secondary {
+    color: #ffffff;
+    background: transparent;
+}
+
+
+.cookie-button--secondary:hover {
+    color: #0f0f0f;
+    background: #ffffff;
+}
+
+
+.footer-cookie-settings {
+    padding: 0;
+
+    color: inherit;
+    background: transparent;
+    border: 0;
+
+    font: inherit;
+    text-decoration: underline;
+
+    cursor: pointer;
+}
+
+
+.footer-cookie-settings:hover {
+    color: #ffffff;
+}
+
+
+@media (max-width: 700px) {
+
+    .cookie-banner__content {
+        align-items: stretch;
+        flex-direction: column;
+
+        gap: 16px;
+    }
+
+
+    .cookie-banner__actions {
+        width: 100%;
+    }
+
+
+    .cookie-button {
+        width: 100%;
+    }
+
+}
