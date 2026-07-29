@@ -1,0 +1,1291 @@
+/* ==========================
+   CONFIGURAÇÃO BASE
+========================== */
+
+/*
+   O botão hambúrguer fica
+   escondido no desktop.
+*/
+
+.nav-toggle {
+    display: none;
+}
+
+
+/* ==========================
+   TABLET E TELEMÓVEL
+========================== */
+
+@media (max-width: 900px) {
+
+    /* ==========================
+       DOCUMENTO
+    ========================== */
+
+    html {
+        scroll-padding-top: 84px;
+    }
+
+
+    /* ==========================
+       HEADER
+    ========================== */
+
+    .header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+
+        width: 100%;
+
+        padding: 0;
+
+        background: #090909;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.08);
+
+        z-index: 1000;
+    }
+
+
+    /* ==========================
+       TOPO DA NAVBAR
+    ========================== */
+
+    .navbar {
+        position: relative;
+
+        width: 100%;
+        max-width: none;
+        min-height: 72px;
+
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 10px;
+
+        margin: 0;
+        padding: 0 20px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==========================
+       LOGO
+    ========================== */
+
+    .navbar > .logo {
+        position: static;
+
+        display: flex;
+        align-items: center;
+
+        flex: 0 0 auto;
+
+        margin: 0;
+
+        opacity: 1;
+        visibility: visible;
+
+        transform: none;
+
+        z-index: 1002;
+    }
+
+
+    .navbar > .logo img {
+        display: block;
+
+        width: 66px;
+        max-width: 66px;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+
+    /* ==========================
+       BOTÃO HAMBÚRGUER
+    ========================== */
+
+    .nav-toggle {
+        position: static;
+
+        width: 44px;
+        height: 44px;
+
+        display: flex;
+        flex: 0 0 44px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        gap: 6px;
+
+        margin: 0;
+        padding: 8px;
+
+        border: 0;
+        background: transparent;
+
+        cursor: pointer;
+
+        z-index: 1002;
+    }
+
+
+    .nav-toggle span {
+        display: block;
+
+        width: 26px;
+        height: 2px;
+
+        background: var(--white);
+
+        transition:
+            transform var(--transition),
+            opacity var(--transition);
+    }
+
+
+    /* Hambúrguer transforma-se em X */
+
+    .header.nav-open
+    .nav-toggle span:nth-child(1) {
+        transform:
+            translateY(8px)
+            rotate(45deg);
+    }
+
+
+    .header.nav-open
+    .nav-toggle span:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .header.nav-open
+    .nav-toggle span:nth-child(3) {
+        transform:
+            translateY(-8px)
+            rotate(-45deg);
+    }
+
+
+    /* ==========================
+       PAINEL DO MENU
+    ========================== */
+
+    .nav-menu {
+        position: fixed;
+        top: 72px;
+        right: 0;
+        left: 0;
+
+        width: 100%;
+        max-height: calc(100vh - 72px);
+        max-height: calc(100dvh - 72px);
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        margin: 0;
+        padding: 10px 22px 26px;
+
+        overflow-y: auto;
+
+        background: #090909;
+
+        border-top:
+            1px solid rgba(255, 255, 255, 0.08);
+
+        box-shadow:
+            0 22px 40px rgba(0, 0, 0, 0.55);
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-12px);
+
+        transition:
+            opacity var(--transition),
+            visibility var(--transition),
+            transform var(--transition);
+
+        box-sizing: border-box;
+
+        z-index: 1001;
+    }
+
+
+    .header.nav-open .nav-menu {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: translateY(0);
+    }
+
+
+    /* ==========================
+       LINKS PRINCIPAIS
+    ========================== */
+
+    .nav-links {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+
+        gap: 0;
+
+        margin: 0;
+        padding: 0;
+    }
+
+
+    .nav-links > li {
+        width: 100%;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.1);
+    }
+
+
+    .nav-links > li > a,
+    .nav-dropdown-trigger {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 15px;
+
+        padding: 18px 2px;
+
+        color: var(--white);
+
+        border: 0;
+        background: transparent;
+
+        font-family: var(--body-font);
+        font-size: 0.9rem;
+        font-weight: 700;
+
+        text-align: left;
+        text-transform: uppercase;
+
+        cursor: pointer;
+
+        box-sizing: border-box;
+    }
+
+
+    .nav-dropdown-icon {
+        flex-shrink: 0;
+
+        margin-left: auto;
+
+        transition: transform var(--transition);
+    }
+
+
+    .nav-item-dropdown.submenu-open
+    .nav-dropdown-icon {
+        transform: rotate(180deg);
+    }
+
+
+    /* ==========================
+       SUBMENU PORTFÓLIO
+    ========================== */
+
+    .nav-item-dropdown > .nav-submenu {
+        position: static;
+
+        width: 100%;
+        min-width: 0;
+
+        display: none;
+
+        margin: 0;
+        padding: 0 0 14px 18px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transform: none;
+
+        background: transparent;
+
+        border: 0;
+        box-shadow: none;
+    }
+
+
+    /*
+       Barber e Tattoo aparecem
+       somente depois do clique.
+    */
+
+    .nav-item-dropdown.submenu-open
+    > .nav-submenu {
+        display: block;
+    }
+
+
+    .nav-submenu::before {
+        display: none;
+    }
+
+
+    .nav-submenu li {
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+
+        border: 0;
+    }
+
+
+    .nav-submenu a {
+        display: block;
+
+        width: 100%;
+
+        padding: 12px 0;
+
+        color: #d3d3d3;
+
+        font-family: var(--body-font);
+        font-size: 0.84rem;
+        font-weight: 600;
+
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+
+
+    .nav-submenu a:hover,
+    .nav-submenu a:focus-visible,
+    .nav-submenu a[aria-current="page"] {
+        padding-left: 0;
+
+        color: var(--red);
+
+        background: transparent;
+    }
+
+
+    /* ==========================
+       BOTÃO AGENDAR
+    ========================== */
+
+    .nav-menu .nav-cta {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin: 22px 0 0;
+        padding: 14px 20px;
+
+        box-sizing: border-box;
+
+        text-align: center;
+        white-space: nowrap;
+    }
+
+
+    body.menu-open {
+        overflow: hidden;
+    }
+
+
+    /* ==========================
+       HERO PRINCIPAL
+    ========================== */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 110px 0 70px;
+
+        background-position: center;
+    }
+
+
+    .hero-content {
+        width: 100%;
+        max-width: 620px;
+
+        padding-top: 0;
+    }
+
+
+    .hero-logo {
+        width: 150px;
+        height: auto;
+
+        margin-bottom: 24px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(4rem, 12vw, 6rem);
+
+        line-height: 0.9;
+    }
+
+
+    .hero p {
+        max-width: 520px;
+
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+
+    /* ==========================
+       GALERIA DA HOME — TABLET
+    ========================== */
+
+    .gallery {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        /*
+           Remove a altura fixa
+           definida no desktop.
+        */
+
+        grid-auto-rows: auto;
+
+        gap: 18px;
+    }
+
+
+    .gallery > .gallery-item,
+    .gallery > .gallery-item-featured {
+        grid-column: auto;
+        grid-row: auto;
+
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+
+        aspect-ratio: 4 / 5;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+    }
+
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /*
+       Em dispositivos de toque,
+       mantém os nomes visíveis.
+    */
+
+    .gallery-overlay {
+        opacity: 1;
+    }
+
+
+    /* ==========================
+       CONTACTO — TABLET
+    ========================== */
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+
+        align-items: stretch;
+
+        gap: 35px;
+    }
+
+
+    .contact-info {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 16px;
+    }
+
+
+    .contact-card {
+        width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+
+    .contact-card h3 {
+        overflow-wrap: anywhere;
+    }
+
+
+    .contact-map {
+        height: 380px;
+    }
+
+
+    /* ==========================
+       PÁGINAS BARBER E TATTOO
+       — TABLET
+    ========================== */
+
+    .portfolio-hero {
+        min-height: 620px;
+
+        padding-top: 135px;
+        padding-bottom: 80px;
+    }
+
+
+    .portfolio-page {
+        padding: 90px 0;
+    }
+
+
+    .portfolio-page-gallery {
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-auto-rows: auto;
+
+        gap: 18px;
+    }
+
+
+    .portfolio-page-item {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+
+        aspect-ratio: 4 / 5;
+    }
+
+
+    .portfolio-page-item img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .portfolio-page-overlay {
+        opacity: 1;
+    }
+
+
+    .portfolio-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 30px;
+    }
+
+}
+
+
+/* ==========================
+   TELEMÓVEL
+========================== */
+
+@media (max-width: 700px) {
+
+    /* ==========================
+       ESTRUTURA GERAL
+    ========================== */
+
+    .container {
+        width: calc(100% - 32px);
+        max-width: none;
+
+        margin-inline: auto;
+    }
+
+
+    /* ==========================
+       HERO PRINCIPAL
+    ========================== */
+
+    .hero {
+        min-height: 100svh;
+
+        padding: 100px 0 55px;
+
+        background-position: 55% center;
+    }
+
+
+    .hero-content {
+        padding-top: 0;
+    }
+
+
+    .hero-logo {
+        width: 130px;
+    }
+
+
+    .hero-tag {
+        font-size: 0.63rem;
+        letter-spacing: 3px;
+    }
+
+
+    .hero h1 {
+        font-size:
+            clamp(3.2rem, 15vw, 4.7rem);
+
+        line-height: 0.9;
+    }
+
+
+    .hero p {
+        font-size: 0.94rem;
+    }
+
+
+    .hero-buttons {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+
+    .hero-buttons .btn-primary,
+    .hero-buttons .btn-outline {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==========================
+       CABEÇALHOS DAS SEÇÕES
+    ========================== */
+
+    .section-header {
+        width: 100%;
+
+        margin-bottom: 42px;
+
+        text-align: center;
+    }
+
+
+    .section-header h2 {
+        font-size:
+            clamp(3rem, 14vw, 4.5rem);
+
+        line-height: 0.95;
+    }
+
+
+    .section-header p {
+        max-width: 350px;
+
+        margin-inline: auto;
+
+        font-size: 0.92rem;
+        line-height: 1.7;
+    }
+
+
+    /* ==========================
+       PORTFÓLIO DA HOME
+    ========================== */
+
+    .portfolio {
+        padding: 75px 0;
+    }
+
+
+    .portfolio-filter {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 12px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .portfolio-filter-link {
+        min-width: 120px;
+
+        padding: 11px 20px;
+
+        text-align: center;
+
+        box-sizing: border-box;
+    }
+
+
+    /*
+       Uma fotografia por linha.
+    */
+
+    .gallery {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        gap: 24px;
+    }
+
+
+    /*
+       Card completo:
+       fotografia em cima e nome abaixo.
+    */
+
+    .gallery > .gallery-item,
+    .gallery > .gallery-item-featured {
+        grid-column: auto;
+        grid-row: auto;
+
+        width: 100%;
+        height: auto;
+        min-width: 0;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        aspect-ratio: auto;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        background: #101010;
+    }
+
+
+    /* Fotografia */
+
+    .gallery > .gallery-item img,
+    .gallery > .gallery-item-featured img {
+        position: static;
+
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+
+        object-fit: cover;
+        object-position: center;
+
+        transform: none;
+        filter: none;
+    }
+
+
+    /*
+       Nome sempre visível,
+       abaixo da fotografia.
+    */
+
+    .gallery .gallery-overlay {
+        position: static;
+        inset: auto;
+
+        width: 100%;
+        min-height: 0;
+
+        display: block;
+
+        padding: 15px 17px 18px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+
+        transform: none;
+
+        background: #101010;
+
+        box-sizing: border-box;
+    }
+
+
+    .gallery .gallery-overlay span {
+        display: block;
+
+        margin-bottom: 6px;
+
+        color: var(--red);
+
+        font-size: 0.65rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+    .gallery .gallery-overlay h3 {
+        display: block;
+
+        margin: 0;
+
+        color: var(--white);
+
+        font-size: 1.45rem;
+        line-height: 1;
+
+        text-transform: uppercase;
+    }
+
+
+    .gallery-item:hover img,
+    .gallery-item-featured:hover img {
+        transform: none;
+        filter: none;
+    }
+
+
+    /* ==========================
+       CONTACTO
+    ========================== */
+
+    .contact {
+        padding: 75px 0;
+    }
+
+
+    .contact .section-header {
+        margin-bottom: 45px;
+    }
+
+
+    .contact-grid {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+    }
+
+
+    .contact-info {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 1fr;
+
+        gap: 16px;
+    }
+
+
+    .contact-card {
+        width: 100%;
+        min-width: 0;
+
+        padding: 26px 22px;
+
+        box-sizing: border-box;
+    }
+
+
+    .contact-card:hover {
+        transform: none;
+    }
+
+
+    .contact-card h3 {
+        overflow-wrap: anywhere;
+    }
+
+
+    .contact-map {
+        width: 100%;
+        height: 330px;
+        min-height: 330px;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+    }
+
+
+    .contact-map iframe {
+        display: block;
+
+        width: 100%;
+        height: 100%;
+
+        border: 0;
+    }
+
+
+    /* ==========================
+       FOOTER
+    ========================== */
+
+    .footer {
+        padding-top: 55px;
+    }
+
+
+    .footer-content {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+
+    .footer-logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .footer-logo img {
+        width: 90px;
+        height: auto;
+    }
+
+
+    .footer-links {
+        width: 100%;
+        max-width: 280px;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 16px 22px;
+
+        text-align: center;
+    }
+
+
+    .footer-links a {
+        width: 100%;
+    }
+
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        gap: 18px 24px;
+    }
+
+
+    .footer-bottom {
+        margin-top: 35px;
+        padding: 22px 18px;
+    }
+
+
+    .footer-bottom p {
+        max-width: 310px;
+
+        margin-inline: auto;
+
+        font-size: 0.75rem;
+        line-height: 1.6;
+
+        text-align: center;
+    }
+
+
+    /* ==========================
+       PÁGINAS BARBER E TATTOO
+    ========================== */
+
+    .portfolio-hero {
+        min-height: 570px;
+
+        padding-top: 115px;
+        padding-bottom: 65px;
+    }
+
+
+    .portfolio-hero h1 {
+        font-size:
+            clamp(4rem, 21vw, 5.5rem);
+    }
+
+
+    .portfolio-page {
+        padding: 75px 0;
+    }
+
+
+    .portfolio-page-gallery {
+        display: grid;
+
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+
+        gap: 24px;
+    }
+
+
+    .portfolio-page-item {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+
+        aspect-ratio: auto;
+
+        overflow: hidden;
+
+        border-radius: 10px;
+
+        background: #101010;
+    }
+
+
+    .portfolio-page-item img {
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 4 / 5;
+
+        object-fit: cover;
+        object-position: center;
+
+        transform: none;
+        filter: none;
+    }
+
+
+    /*
+       Nome abaixo da fotografia
+       nas galerias individuais.
+    */
+
+    .portfolio-page-overlay {
+        position: static;
+        inset: auto;
+
+        width: 100%;
+        min-height: 0;
+
+        display: block;
+
+        padding: 15px 17px 18px;
+
+        opacity: 1;
+        visibility: visible;
+        pointer-events: none;
+
+        transform: none;
+
+        background: #101010;
+
+        box-sizing: border-box;
+    }
+
+
+    .portfolio-page-overlay span {
+        display: block;
+
+        margin-bottom: 6px;
+
+        color: var(--red);
+
+        font-size: 0.65rem;
+        font-weight: 700;
+
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+
+    .portfolio-page-overlay h3 {
+        margin: 0;
+
+        color: var(--white);
+
+        font-size: 1.45rem;
+        line-height: 1;
+
+        text-transform: uppercase;
+    }
+
+
+    .portfolio-cta {
+        padding: 70px 0;
+    }
+
+
+    .portfolio-cta-content {
+        gap: 30px;
+    }
+
+
+    .portfolio-cta .btn-primary {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    /* ==========================
+       BARBER POLE
+    ========================== */
+
+    /*
+       Escondido no telemóvel para
+       não cobrir fotografias e textos.
+    */
+
+    .barber-pole {
+        display: none;
+    }
+
+}
+
+
+/* ==========================
+   TELEMÓVEIS PEQUENOS
+========================== */
+
+@media (max-width: 480px) {
+
+    .navbar {
+        min-height: 68px;
+
+        gap: 8px;
+
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+
+    .navbar > .logo img {
+        width: 60px;
+        max-width: 60px;
+    }
+
+
+    .nav-toggle {
+        width: 42px;
+        height: 42px;
+
+        flex-basis: 42px;
+    }
+
+
+    .nav-toggle span {
+        width: 24px;
+    }
+
+
+    .nav-menu {
+        top: 68px;
+
+        max-height: calc(100vh - 68px);
+        max-height: calc(100dvh - 68px);
+
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+
+    .nav-links > li > a,
+    .nav-dropdown-trigger {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+
+
+    .hero h1 {
+        font-size: 3.2rem;
+    }
+
+
+    .section-header h2 {
+        font-size: 3.1rem;
+    }
+
+}
+
+
+/* ==========================
+   MOVIMENTO REDUZIDO
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .nav-menu,
+    .nav-toggle span,
+    .nav-dropdown-icon {
+        transition: none;
+    }
+
+}
+
+.footer-hours {
+    width: 100%;
+    max-width: 320px;
+
+    text-align: center;
+}

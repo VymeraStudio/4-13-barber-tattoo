@@ -1,0 +1,254 @@
+/* ==========================
+   CONTAINER
+========================== */
+
+.container {
+
+    width: min(92%, 1400px);
+
+    margin-inline: auto;
+
+}
+
+
+
+/* ==========================
+   BOTÃO BASE
+========================== */
+
+.btn-primary,
+.btn-outline {
+
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+
+    min-height: 46px;
+
+
+    padding: 14px 32px;
+
+
+    font-family: var(--body-font);
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+
+    border-radius: 4px;
+
+
+    cursor: pointer;
+
+
+    transition:
+        background var(--transition),
+        color var(--transition),
+        border-color var(--transition),
+        transform var(--transition);
+
+
+
+}
+
+
+
+/* ==========================
+   BOTÃO PRINCIPAL
+========================== */
+
+
+.btn-primary {
+
+
+    background: var(--white);
+
+    color: var(--black);
+
+
+    border: 1px solid var(--white);
+
+
+}
+
+
+
+.btn-primary:hover {
+
+
+    background: var(--red);
+
+    border-color: var(--red);
+
+    color: var(--white);
+
+
+    transform: translateY(-2px);
+
+
+}
+
+
+
+/* ==========================
+   BOTÃO OUTLINE
+========================== */
+
+
+.btn-outline {
+
+
+    background: transparent;
+
+
+    color: var(--white);
+
+
+    border: 1px solid var(--white);
+
+
+
+}
+
+
+
+.btn-outline:hover {
+
+
+    background: var(--white);
+
+
+    color: var(--black);
+
+
+    transform: translateY(-2px);
+
+
+}
+
+
+
+/* ==========================
+   BOTÃO NAVBAR
+========================== */
+
+
+.nav-cta {
+
+
+    min-width: 125px;
+
+
+}
+
+
+
+/* ==========================
+   BOTÃO FILTRO PORTFÓLIO
+========================== */
+
+
+.portfolio-filter-link {
+
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    padding: 12px 35px;
+
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        .25
+    );
+
+
+    color: var(--white);
+
+
+    font-family: var(--body-font);
+
+    font-size: .85rem;
+
+    font-weight: 700;
+
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+
+    transition: var(--transition);
+
+
+
+}
+
+
+
+.portfolio-filter-link:hover {
+
+
+    background: var(--red);
+
+    border-color: var(--red);
+
+
+}
+
+
+
+/* ==========================
+   FOCO ACESSIBILIDADE
+========================== */
+
+
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.portfolio-filter-link:focus-visible {
+
+
+    outline: 2px solid var(--red);
+
+    outline-offset: 4px;
+
+
+}
+
+
+
+/* ==========================
+   REDUZ MOVIMENTO
+========================== */
+
+
+@media (prefers-reduced-motion: reduce) {
+
+
+    .btn-primary,
+    .btn-outline,
+    .portfolio-filter-link {
+
+
+        transition: none;
+
+
+    }
+
+
+}

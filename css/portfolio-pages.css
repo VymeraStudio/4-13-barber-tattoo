@@ -1,0 +1,461 @@
+/* ==========================
+   HERO INTERNO
+========================== */
+
+.portfolio-hero {
+    position: relative;
+
+    min-height: 68vh;
+    padding: 160px 0 90px;
+
+    display: flex;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.92) 0%,
+            rgba(10, 10, 10, 0.60) 55%,
+            rgba(10, 10, 10, 0.35) 100%
+        ),
+        url("../assets/images/interior/hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+/* ==========================
+   OVERLAY DO HERO
+========================== */
+
+.portfolio-hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to bottom,
+        rgba(10, 10, 10, 0.15),
+        rgba(10, 10, 10, 0.55)
+    );
+
+    pointer-events: none;
+}
+
+
+/* ==========================
+   CONTEÚDO DO HERO
+========================== */
+
+.portfolio-hero-content {
+    position: relative;
+
+    max-width: 680px;
+
+    z-index: 2;
+}
+
+
+.portfolio-page-label {
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: var(--red);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+
+.portfolio-hero h1 {
+    margin-bottom: 20px;
+
+    color: var(--white);
+
+    font-size: clamp(4rem, 9vw, 7rem);
+    line-height: 0.9;
+    letter-spacing: 3px;
+}
+
+
+.portfolio-hero p {
+    max-width: 520px;
+    margin-bottom: 35px;
+
+    color: #dedede;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* ==========================
+   PÁGINA DE PORTFÓLIO
+========================== */
+
+.portfolio-page {
+    padding: 120px 0;
+
+    background: var(--dark);
+
+    scroll-margin-top: 110px;
+}
+
+
+/* ==========================
+   GALERIA
+========================== */
+
+.portfolio-page-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* ==========================
+   ITEM DA GALERIA
+========================== */
+
+.portfolio-page-item {
+    position: relative;
+
+    min-height: 430px;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background: #151515;
+
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+}
+
+
+.portfolio-page-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+.portfolio-page-item:hover img {
+    transform: scale(1.06);
+
+    filter: brightness(0.82);
+}
+
+
+/* ==========================
+   OVERLAY DAS IMAGENS
+========================== */
+
+.portfolio-page-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 35%,
+        rgba(10, 10, 10, 0.92) 100%
+    );
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+
+.portfolio-page-item:hover .portfolio-page-overlay {
+    opacity: 1;
+}
+
+
+.portfolio-page-overlay span {
+    margin-bottom: 8px;
+
+    color: var(--red);
+
+    font-size: 0.72rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+
+.portfolio-page-overlay h3 {
+    color: var(--white);
+
+    font-size: 1.8rem;
+    line-height: 1;
+}
+
+
+/* ==========================
+   FOCO PELO TECLADO
+========================== */
+
+.portfolio-page-item:focus-within {
+    outline: 2px solid var(--red);
+    outline-offset: 5px;
+}
+
+
+/* ==========================
+   CTA / AGENDAMENTO
+========================== */
+
+.portfolio-cta {
+    position: relative;
+
+    padding: 90px 0;
+
+    overflow: hidden;
+
+    background: #0d0d0d;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.portfolio-cta::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    width: 90px;
+    height: 3px;
+
+    transform: translateX(-50%);
+
+    background: var(--red);
+}
+
+
+.portfolio-cta-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+}
+
+
+.portfolio-cta-text {
+    max-width: 700px;
+}
+
+
+.portfolio-cta-text > span {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: var(--red);
+
+    font-size: 0.75rem;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+
+.portfolio-cta h2 {
+    margin-bottom: 15px;
+
+    color: var(--white);
+
+    font-size: clamp(2.6rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+
+.portfolio-cta p {
+    color: #b7b7b7;
+
+    line-height: 1.7;
+}
+
+
+.portfolio-cta .btn-primary {
+    flex-shrink: 0;
+}
+
+
+/* ==========================
+   LINK DA PÁGINA ATUAL
+========================== */
+
+.nav-submenu a[aria-current="page"],
+.footer-links a[aria-current="page"] {
+    color: var(--red);
+}
+
+
+/* ==========================
+   TABLET
+========================== */
+
+@media (max-width: 950px) {
+
+    .portfolio-hero {
+        min-height: 60vh;
+        padding: 150px 0 80px;
+
+        background-position: center;
+    }
+
+
+    .portfolio-page {
+        padding: 90px 0;
+    }
+
+
+    .portfolio-page-gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    .portfolio-page-item {
+        min-height: 400px;
+    }
+
+
+    .portfolio-cta-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media (max-width: 620px) {
+
+    .portfolio-hero {
+        min-height: 560px;
+        padding: 140px 0 70px;
+
+        background-position: 58% center;
+    }
+
+
+    .portfolio-hero h1 {
+        font-size: clamp(4rem, 20vw, 5.5rem);
+    }
+
+
+    .portfolio-hero p {
+        font-size: 0.95rem;
+    }
+
+
+    .portfolio-page {
+        padding: 75px 0;
+    }
+
+
+    .portfolio-page-gallery {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+
+    .portfolio-page-item {
+        min-height: 430px;
+    }
+
+
+    /*
+       No telemóvel não existe hover.
+       As informações ficam sempre visíveis.
+    */
+
+    .portfolio-page-overlay {
+        opacity: 1;
+    }
+
+
+    .portfolio-page-item:hover img {
+        transform: none;
+
+        filter: none;
+    }
+
+
+    .portfolio-cta {
+        padding: 70px 0;
+    }
+
+
+    .portfolio-cta-content {
+        gap: 30px;
+    }
+
+
+    .portfolio-cta .btn-primary {
+        width: 100%;
+    }
+
+}
+
+
+/* ==========================
+   MOVIMENTO REDUZIDO
+========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-page-item img,
+    .portfolio-page-overlay {
+        transition: none;
+    }
+
+}
+
+.portfolio-hero-tattoo {
+    background-position: 60% center;
+}
+
+/* ==========================
+   HERO DA PÁGINA TATTOO
+========================== */
+
+.portfolio-hero-tattoo {
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(10, 10, 10, 0.94) 0%,
+            rgba(10, 10, 10, 0.62) 55%,
+            rgba(10, 10, 10, 0.38) 100%
+        ),
+        url("../assets/images/tattoo/hero.png");
+
+    background-position: center;
+}
