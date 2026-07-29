@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pedrofariasdev.github.io/4-13-barber-tattoo/sitemap.xml
